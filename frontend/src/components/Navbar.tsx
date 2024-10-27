@@ -18,22 +18,22 @@ const Navbar: React.FC<NavbarProps> = ({ onFeaturesClick, onHowItWorksClick, onF
           <img src="/image-removebg-preview.png" alt="StudyMate AI Logo" className="h-15 w-20" />
         
           <div className="hidden md:flex space-x-4">
-            <Link href="/" className="hover:bg-yellowHighlight p-2 rounded text-white hover:text-darkBlue">Home</Link>
-            <a onClick={onFeaturesClick} className="hover:bg-yellowHighlight p-2 rounded text-white hover:text-darkBlue">Features</a>
-            <a onClick={onHowItWorksClick} className="hover:bg-yellowHighlight p-2 rounded text-white hover:text-darkBlue">How it works</a>
-            <a onClick={onFAQClick} className="hover:bg-yellowHighlight p-2 rounded text-white hover:text-darkBlue">FAQ</a>
+            <Link href="/" className="hover:bg-yellowHighlight p-2 rounded text-white hover:text-darkBlue transition duration-200 ease-in-out">Home</Link>
+            <a onClick={onFeaturesClick} className="hover:bg-yellowHighlight p-2 rounded text-white hover:text-darkBlue transition duration-200 ease-in-out">Features</a>
+            <a onClick={onHowItWorksClick} className="hover:bg-yellowHighlight p-2 rounded text-white hover:text-darkBlue transition duration-200 ease-in-out">How it works</a>
+            <a onClick={onFAQClick} className="hover:bg-yellowHighlight p-2 rounded text-white hover:text-darkBlue transition duration-200 ease-in-out">FAQ</a>
           </div>
         </div>
 
         <div className="hidden md:flex space-x-4">
-          <Link href="/login" className="hover:bg-yellowHighlight p-2 rounded text-white hover:text-darkBlue">Login</Link>
-          <Link href="/register" className="bg-yellowHighlight hover:bg-yellow-600 p-2 rounded text-darkBlue">Register</Link>
+          <Link href="/login" className="hover:bg-yellowHighlight p-2 rounded text-white hover:text-darkBlue transition duration-200 ease-in-out">Login</Link>
+          <Link href="/register" className="bg-yellowHighlight hover:bg-yellow-600 p-2 rounded text-darkBlue transition duration-200 ease-in-out">Register</Link>
         </div>
 
-        {/* Mobile Menu Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="md:hidden flex items-center px-3 py-2 border rounded text-white border-white"
+          aria-expanded={isOpen}
         >
           <svg
             className="fill-current h-5 w-5"

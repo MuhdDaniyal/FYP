@@ -21,15 +21,15 @@ const Footer = () => {
               <FontAwesomeIcon icon={faPhone} className="mr-2" />
               (92) 111-222-333
             </a>
-            <a href="#" className="flex items-center text-sm hover:text-yellowHighlight">
+            <a href="#" target="_blank" rel="noopener noreferrer" className="flex items-center text-sm hover:text-yellowHighlight">
               <FontAwesomeIcon icon={faFacebookF} className="mr-2" />
               Facebook
             </a>
-            <a href="#" className="flex items-center text-sm hover:text-yellowHighlight">
+            <a href="#" target="_blank" rel="noopener noreferrer" className="flex items-center text-sm hover:text-yellowHighlight">
               <FontAwesomeIcon icon={faInstagram} className="mr-2" />
               Instagram
             </a>
-            <a href="#" className="flex items-center text-sm hover:text-yellowHighlight">
+            <a href="#" target="_blank" rel="noopener noreferrer" className="flex items-center text-sm hover:text-yellowHighlight">
               <FontAwesomeIcon icon={faLinkedinIn} className="mr-2" />
               LinkedIn
             </a>

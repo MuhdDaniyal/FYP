@@ -1,4 +1,3 @@
-// src/components/HeroSection.tsx
 import React from 'react';
 
 const HeroSection: React.FC = () => {
@@ -8,7 +7,7 @@ const HeroSection: React.FC = () => {
       style={{ backgroundImage: 'url(/background.jpg)' }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row justify-between items-center">
-        {/* Text Section */}
+        
         <div className="text-left text-white lg:w-1/2 space-y-4 lg:pr-8">
           <h1 className="text-5xl font-bold animate-fade-in">
             AI-powered Study Assistant
@@ -18,7 +17,7 @@ const HeroSection: React.FC = () => {
           </p>
         </div>
 
-        {/* Image Section */}
+        
         <div className="lg:w-1/2 flex justify-center items-center lg:ml-12">
           <img
             src="/mychoice-removebg-preview.png"
