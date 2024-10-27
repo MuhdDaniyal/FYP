@@ -1,14 +1,23 @@
+import { useRouter } from 'next/router'; // Import useRouter
 import Link from 'next/link';
-import Navbar from '../components/Navbar';
+import Navbar from '@/components/Navbar';
 
 const LoginPage = () => {
+  const router = useRouter(); // Initialize useRouter
+
+  const handleSubmit = (e) => {
+    e.preventDefault(); // Prevent the default form submission
+    // Here, you can add authentication logic before redirecting
+    router.push('/student_dashboard'); // Redirect to the student dashboard
+  };
+
   return (
     <div className="min-h-screen bg-cover bg-center relative" style={{ backgroundImage: 'url(/background.jpg)' }}>
       <Navbar />
       <div className="flex justify-center items-center h-screen">
         <div className="bg-white bg-opacity-35 p-8 rounded-lg shadow-md max-w-md w-full">
           <h2 className="text-3xl font-bold mb-10 text-white text-center">Login</h2>
-          <form>
+          <form onSubmit={handleSubmit}> {/* Attach handleSubmit to the form */}
             <div className="mb-4">
               <label className="block text-white mb-2" htmlFor="email">Email</label>
               <input
@@ -31,7 +40,7 @@ const LoginPage = () => {
             </div>
             <button
               className="w-full bg-yellowHighlight hover:bg-yellow-600 text-darkBlue font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-              type="submit"
+              type="submit" // Keep type as submit
             >
               Login
             </button>
